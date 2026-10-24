@@ -1,0 +1,30 @@
+# macOS metadata
+.DS_Store
+._*
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Jupyter autosaves
+.ipynb_checkpoints/
+
+# Local secrets (keep example configuration available)
+.env
+.env.*
+!.env.example
+
+# Editor and document temporary files
+.idea/
+.vscode/
+~$*
+*.swp
+*.swo
