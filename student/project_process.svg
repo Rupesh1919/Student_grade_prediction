@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1680" viewBox="0 0 1200 1680">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+<rect width="1200" height="1680" fill="#f1f5f9"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="600" y="62" text-anchor="middle" font-size="34" font-weight="700" fill="#0f172a">Student Grade Prediction</text>
+<text x="600" y="99" text-anchor="middle" font-size="20" fill="#475569">Project process • from student records to reproducible findings</text>
+<rect x="100" y="130" width="1000" height="150" rx="16" fill="white" stroke="#cbd5e1"/>
+<g transform="translate(990 173)" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><title>Database</title><ellipse cx="32" cy="12" rx="24" ry="9"/><path d="M8 12v40c0 12 48 12 48 0V12M8 31c0 12 48 12 48 0M8 49c0 12 48 12 48 0"/></g>
+<circle cx="145" cy="166" r="21" fill="#0f766e"/>
+<text x="145" y="173" text-anchor="middle" font-size="21" font-weight="700" fill="white">1</text>
+<text x="184" y="173" font-size="24" font-weight="700" fill="#0f172a">Load student data</text>
+<text x="184" y="205" font-size="19" fill="#334155">UCI Student Performance dataset</text>
+<text x="184" y="231" font-size="19" fill="#334155">Mathematics: 395 records | Portuguese: 649 records</text>
+<text x="184" y="257" font-size="19" fill="#334155">Analyze the two courses separately</text>
+<path d="M600,282 V303" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="100" y="311" width="1000" height="150" rx="16" fill="white" stroke="#cbd5e1"/>
+<g transform="translate(990 354)" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><title>Explore</title><circle cx="26" cy="25" r="19"/><path d="m40 39 18 19M15 29l8-10 8 7 7-12"/></g>
+<circle cx="145" cy="347" r="21" fill="#0f766e"/>
+<text x="145" y="354" text-anchor="middle" font-size="21" font-weight="700" fill="white">2</text>
+<text x="184" y="354" font-size="24" font-weight="700" fill="#0f172a">Explore data and define targets</text>
+<text x="184" y="386" font-size="19" fill="#334155">Check missing values and grade distributions</text>
+<text x="184" y="412" font-size="19" fill="#334155">Predict final grade G3 (0–20); at risk = G3 &lt; 10</text>
+<text x="184" y="438" font-size="19" fill="#334155">Retain zero grades; exclude absences from predictors</text>
+<path d="M600,463 V484" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="100" y="492" width="1000" height="150" rx="16" fill="white" stroke="#cbd5e1"/>
+<g transform="translate(990 535)" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><title>Feature sets</title><rect x="7" y="8" width="50" height="12" rx="3"/><rect x="7" y="26" width="50" height="12" rx="3"/><rect x="7" y="44" width="50" height="12" rx="3"/></g>
+<circle cx="145" cy="528" r="21" fill="#0f766e"/>
+<text x="145" y="535" text-anchor="middle" font-size="21" font-weight="700" fill="white">3</text>
+<text x="184" y="535" font-size="24" font-weight="700" fill="#0f172a">Compare three feature sets</text>
+<text x="184" y="567" font-size="19" fill="#334155">Background variables only (no period grades)</text>
+<text x="184" y="593" font-size="19" fill="#334155">Background + G1</text>
+<text x="184" y="619" font-size="19" fill="#334155">Background + G1 + G2</text>
+<path d="M600,644 V665" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="100" y="673" width="1000" height="150" rx="16" fill="white" stroke="#cbd5e1"/>
+<g transform="translate(990 716)" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><title>Data split</title><path d="M32 5v21M12 39V26h40v13"/><rect x="3" y="40" width="22" height="19" rx="3"/><rect x="40" y="40" width="21" height="19" rx="3"/></g>
+<circle cx="145" cy="709" r="21" fill="#0f766e"/>
+<text x="145" y="716" text-anchor="middle" font-size="21" font-weight="700" fill="white">4</text>
+<text x="184" y="716" font-size="24" font-weight="700" fill="#0f172a">Split and preprocess</text>
+<text x="184" y="748" font-size="19" fill="#334155">Fixed 80% training / 20% held-out test split</text>
+<text x="184" y="774" font-size="19" fill="#334155">Stratify by at-risk label; reuse split across stages and tasks</text>
+<text x="184" y="800" font-size="19" fill="#334155">Fit one-hot encoding inside each training fold</text>
+<path d="M600,825 V846" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="100" y="854" width="1000" height="150" rx="16" fill="white" stroke="#cbd5e1"/>
+<g transform="translate(990 897)" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><title>Model training</title><path d="m26 5 12 0 2 9 8 4 9-3 6 10-7 7v9l7 7-6 10-9-3-8 4-2 9H26l-2-9-8-4-9 3-6-10 7-7v-9l-7-7 6-10 9 3 8-4z" transform="translate(2 -3) scale(.9)"/><circle cx="31" cy="30" r="11"/></g>
+<circle cx="145" cy="890" r="21" fill="#0f766e"/>
+<text x="145" y="897" text-anchor="middle" font-size="21" font-weight="700" fill="white">5</text>
+<text x="184" y="897" font-size="24" font-weight="700" fill="#0f172a">Train models using training data</text>
+<text x="184" y="929" font-size="19" fill="#334155">Regression: linear regression, random forest, gradient boosting</text>
+<text x="184" y="955" font-size="19" fill="#334155">Select regressor by five-fold cross-validation MAE</text>
+<text x="184" y="981" font-size="19" fill="#334155">Classification: fixed balanced random forest; CV recall</text>
+<path d="M600,1006 V1027" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="100" y="1035" width="1000" height="150" rx="16" fill="white" stroke="#cbd5e1"/>
+<g transform="translate(990 1078)" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><title>Evaluation</title><path d="M6 5v53h53M17 48V33h9v15M33 48V23h9v25M49 48V12h9v36"/></g>
+<circle cx="145" cy="1071" r="21" fill="#0f766e"/>
+<text x="145" y="1078" text-anchor="middle" font-size="21" font-weight="700" fill="white">6</text>
+<text x="184" y="1078" font-size="24" font-weight="700" fill="#0f172a">Evaluate on held-out students</text>
+<text x="184" y="1110" font-size="19" fill="#334155">Regression: MAE and R²; compare mean / median baselines</text>
+<text x="184" y="1136" font-size="19" fill="#334155">Classification: accuracy, precision, recall, F1, confusion counts</text>
+<text x="184" y="1162" font-size="19" fill="#334155">Report recall uncertainty and compare always-pass baseline</text>
+<path d="M600,1187 V1208" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="100" y="1216" width="1000" height="150" rx="16" fill="white" stroke="#cbd5e1"/>
+<g transform="translate(990 1259)" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><title>Interpretation</title><path d="M22 44c0-8-12-12-12-24a22 22 0 0 1 44 0c0 12-12 16-12 24zM22 51h20M25 59h14M32 5v12M19 16l8 8M45 16l-8 8M32 25v19"/></g>
+<circle cx="145" cy="1252" r="21" fill="#0f766e"/>
+<text x="145" y="1259" text-anchor="middle" font-size="21" font-weight="700" fill="white">7</text>
+<text x="184" y="1259" font-size="24" font-weight="700" fill="#0f172a">Interpret and check sensitivity</text>
+<text x="184" y="1291" font-size="19" fill="#334155">Permutation importance for no-grade random forest</text>
+<text x="184" y="1317" font-size="19" fill="#334155">Secondary analysis: exclude G3 = 0 and create new splits</text>
+<text x="184" y="1343" font-size="19" fill="#334155">Compare results with care: restricted test populations differ</text>
+<path d="M600,1368 V1389" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="100" y="1397" width="1000" height="150" rx="16" fill="white" stroke="#cbd5e1"/>
+<g transform="translate(990 1440)" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><title>Report</title><path d="M14 4h26l13 13v43H14zM40 4v14h13M23 29h21M23 38h21M23 47h15"/></g>
+<circle cx="145" cy="1433" r="21" fill="#0f766e"/>
+<text x="145" y="1440" text-anchor="middle" font-size="21" font-weight="700" fill="white">8</text>
+<text x="184" y="1440" font-size="24" font-weight="700" fill="#0f172a">Save results and communicate findings</text>
+<text x="184" y="1472" font-size="19" fill="#334155">Export CSV tables, four figures, and environment metadata</text>
+<text x="184" y="1498" font-size="19" fill="#334155">Review executed notebook and write the Word report</text>
+<text x="184" y="1524" font-size="19" fill="#334155">Discuss grade availability, uncertainty, and study limitations</text>
+<text x="600" y="1623" text-anchor="middle" font-size="17" fill="#475569">Retrospective grade-availability experiments; predictive associations do not establish causation.</text>
+</g></svg>

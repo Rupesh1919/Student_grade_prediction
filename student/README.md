@@ -2,6 +2,10 @@
 
 Open `Student_grade_convention.ipynb` for the analysis and `Residency_Paper.docx` for the report. Original submissions are preserved under `review_outputs/`.
 
+## Project process
+
+![Student grade prediction project process](project_process.svg)
+
 ## Reproduce
 
 Verified with Python **3.13.1**. From this folder:
